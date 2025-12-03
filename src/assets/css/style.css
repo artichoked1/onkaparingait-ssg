@@ -1,0 +1,40 @@
+@import './fonts.css';
+body {
+    font-family: Ubuntu, normal, serif;
+    font-style: normal;
+    font-weight: 300;
+
+    background-color: #111;
+    color: #eee;
+}
+a {
+    text-decoration: none;
+    color: #eee;
+}
+a:hover {
+    color: #b0b0b0;
+}
+.nav-link {
+    font-size: 1.5rem;
+    padding: 1rem;
+    
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.section-landing {
+    
+}
+.landing-container {
+    
+}
+.landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
