@@ -4,8 +4,13 @@ body {
     font-style: normal;
     font-weight: 300;
 
+    margin: 0;
+
     background-color: #111;
     color: #eee;
+}
+h1 {
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -17,7 +22,9 @@ a:hover {
 .nav-link {
     font-size: 1.5rem;
     padding: 1rem;
-    
+}
+header {
+    height: 10vh;
 }
 nav {
     display: flex;
@@ -25,16 +32,34 @@ nav {
     align-items: center;
     justify-content: center;
 }
-.section-landing {
-    
-}
-.landing-container {
-    
-}
 .landing {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.capabilities {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    /*border: 2px solid red;*/
+    /*border-radius: 5px;*/
+}
+.about {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    /*border: 2px solid red;*/
+    /*border-radius: 5px;*/
 }
