@@ -5,6 +5,7 @@
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <header>
@@ -16,6 +17,14 @@
 </header>
 
 <body>
+  <nav>
+    <div class="links-flex">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#capabilities">Capabilities</a>
+      <a class="nav-link" href="#about">About</a>
+    </div>
+  </nav>
+
   <main>
     <div class="landing">
       <div class="hero-card">
@@ -23,17 +32,37 @@
         <div>the best it biz in town</div>
       </div>
     </div>
-
-    <div class="capabilities" id="capabilities">
-      <h1>Capabilities</h1>
+    <div class="section-divider"></div>
+    <div class="section-box" id="about">
+      <div class="section-child">
+        <div>
+          <h1>About</h1>
+          <p>
+            Onkaparinga IT is a local mobile IT repair service based in
+            Onkaparinga, South Australia. We specialise in repairing
+            computers, laptops, and mobile phones.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class="about" id="about">
-      <div style="height: 10vh"> </div>
-      <h1>About</h1>
-      <p>
-        We are a small tech repair business started by two friends just out of high school.
-      </p>
+    <div class="section-divider"></div>
+    <div class="section-box" id="capabilities">
+      <div class="section-child">
+      <div>
+        <h1>Capabilities</h1>
+        <p>
+          Onkaparinga IT offers a wide range of IT help and repair services. We can help with Windows, MacOS, and Linux systems.
+          We specialise in the following:
+        </p>
+        <ul>
+          <li>General IT help</li>
+          <li>PC and Laptop Repair</li>
+          <li>Backup and Data Recovery</li>
+          <li>Virus and Malware Protection</li>
+          <li>Networking</li>
+        </ul>
+      </div>
+      </div>
     </div>
   </main>
 </body>

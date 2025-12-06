@@ -12,6 +12,12 @@ body {
 h1 {
     margin: 0;
 }
+h1 {
+    text-align: center;
+}
+p {
+    text-align: justify;
+}
 a {
     text-decoration: none;
     color: #eee;
@@ -20,7 +26,7 @@ a:hover {
     color: #b0b0b0;
 }
 .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 1rem;
 }
 nav {
@@ -33,6 +39,16 @@ nav {
     background-color: #111;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .25s ease;
+    flex-shrink: 0;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+.links-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 nav.scrolled {
     border-bottom: 1px solid #4f4d4d;
@@ -41,9 +57,33 @@ nav.scrolled {
 .landing {
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.section-box {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.section-divider {
+    height: 1px;
+    background: #4f4d4d;
+    width: 90%;
+    margin: 1rem auto;
+}
+.section-child {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 .hero-card {
     display: flex;
