@@ -9,8 +9,10 @@ body {
     background-color: #111;
     color: #eee;
 }
-h1 {
-    margin: 0;
+.hero-text {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 h1 {
     text-align: center;
@@ -108,4 +110,23 @@ nav.scrolled {
     justify-content: start;
     /*border: 2px solid red;*/
     /*border-radius: 5px;*/
+}
+.member-box {
+    width: 100%;
+}
+.member-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #181818;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #4f4d4d;
+}
+.member-img {
+    border-radius: 5px;
 }
