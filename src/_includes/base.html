@@ -6,13 +6,22 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <script
+          src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+  </script>
 </head>
 <body>
   <nav>
     <div class="links-flex">
-      <a class="nav-link" href="#home">Home</a>
-      <a class="nav-link" href="#capabilities">Capabilities</a>
-      <a class="nav-link" href="#about">About</a>
+      <button onclick="scrollToElement('home')" class="nav-link" href="#home">Home</button>
+      <button onclick="scrollToElement('capabilities')" class="nav-link" href="#capabilities">Capabilities</button>
+      <button onclick="scrollToElement('team')" class="nav-link" href="#team">Team</button>
+      <button onclick="scrollToElement('location')" class="nav-link" href="#location">Location</button>
+      <button onclick="scrollToElement('about')" class="nav-link" href="#about">About</button>
     </div>
   </nav>
 
@@ -23,20 +32,7 @@
         <div>Your local mobile IT repair technicians.</div>
       </div>
     </div>
-    <div class="section-divider"></div>
-    <div class="section-box" id="about">
-      <div class="section-child">
-        <div>
-          <h1>About</h1>
-          <p>
-            Onkaparinga IT is a local mobile IT repair service based in
-            Onkaparinga, South Australia. We specialise in repairing
-            computers, laptops, and mobile phones.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="section-divider"></div>
+<!--    <div class="section-divider"></div>-->
     <div class="section-box" id="capabilities">
       <div class="section-child">
       <div>
@@ -55,32 +51,71 @@
       </div>
       </div>
     </div>
+    <div class="section-divider"></div>
     <div class="section-box" id="team">
       <div class="section-child">
-            <h1>Our Team</h1>
-            <div class="member-box">
-                <div class="member-card img-right">
-                    <div>
-                      <h2>Nikolai Patrick</h2>
-                      <p>Lead Technician</p>
-                    </div>
-                    <div>
-                      <img class="member-img" src="https://placecats.com/bella/300/300" alt="mug shot">
-                    </div>
-
-                </div>
-              <div class="member-card img-left">
-                  <img class="member-img" src="https://placecats.com/millie/300/300" alt="mug shot">
-                <div>
-                  <h2>Morris Caines</h2>
-                  <p>Lead Technician</p>
-                </div>
-
-
+        <h1>Our Team</h1>
+        <div class="member-box">
+          <div class="member-card" id="nikolai">
+            <div class="member-text-left">
+              <h2>Nikolai Patrick</h2>
+              <p>Nikolai is a professional computer. He has been computing for years and has become a professional. </p>
+              <div class="contact-info">
+                <a href="tel:+61 0451347642">Phone: 0451 347 642</a>
               </div>
             </div>
+            <img class="member-img" src="https://placecats.com/bella/300/300" alt="mug shot">
+          </div>
 
+          <div class="member-card" id="morris">
+            <div class="member-text-right">
+              <h2>Morris Caines</h2>
+              <p>Morris is a professional computer. He has been computing for years and has become a professional. </p>
+              <div class="contact-info">
+                <a href="tel:+61 0420279342">Phone: 0420 279 342</a>
+              </div>
+            </div>
+            <img class="member-img" src="https://placecats.com/millie/300/300" alt="mug shot">
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="section-divider"></div>
+    <div class="section-box" id="location">
+      <div class="section-child">
+        <div>
+          <h1>Locations</h1>
+          <p>
+            Onkaparinga IT is based in the southern suburbs of Adelaide. The map below shows the area that we operate in.
+          </p>
+          <div id="map"></div>
+
+          <style>
+            #map {
+              width: 100%;
+              height: 500px; /* small embedded map */
+              border-radius: 12px;
+              border: 1px solid #4f4d4d;
+            }
+          </style>
+
+        </div>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+    <div class="section-box" id="about">
+      <div class="section-child">
+        <div>
+          <h1>About</h1>
+          <p>
+            Onkaparinga IT is a local mobile IT repair service based in
+            Onkaparinga, South Australia. We specialise in repairing
+            computers, laptops, and mobile phones.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider">
     </div>
   </main>
 </body>
