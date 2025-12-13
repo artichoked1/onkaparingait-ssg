@@ -30,7 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     navLinks.forEach((link) => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (event) => {
+            const targetId = link.getAttribute('data-target');
+            if (targetId) {
+                event.preventDefault();
+                scrollToElement(targetId);
+            }
             closeMenu();
         });
     });

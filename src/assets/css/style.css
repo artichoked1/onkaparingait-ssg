@@ -103,6 +103,7 @@ nav {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    list-style: none;
 }
 nav.scrolled {
     border-bottom: 1px solid #4f4d4d;
@@ -140,6 +141,7 @@ nav.scrolled {
     background: #4f4d4d;
     width: 90%;
     margin: 1rem auto;
+    border: 0;
 }
 .section-child {
     max-width: 800px;
@@ -194,12 +196,14 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+
     height: 5rem;
     background-color: #181818;
     border-top: 1px solid #4f4d4d;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 #nikolai {
@@ -209,6 +213,10 @@ footer {
     flex-direction: row-reverse;
 }
 .member-card h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.member-card h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -224,6 +232,10 @@ footer {
     margin-right: 1.5rem;
 }
 #map {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    border: 1px solid #4f4d4d;
     overflow: hidden;
     background: #111;
 }
@@ -241,8 +253,26 @@ img {
     max-width: 100%;
     height: auto;
 }
+.section-header {
+    width: 100%;
+}
+.section-title {
+    text-align: center;
+    margin-top: 0;
+}
+.section-subtitle {
+    font-weight: 500;
+    margin: 0.5rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+.map-wrapper {
+    width: 100%;
+}
 .footer-copyright {
     margin-bottom: 1rem;
+    text-align: center;
+}
+.footer-text {
     text-align: center;
 }
 @media screen and (max-width: 800px) {

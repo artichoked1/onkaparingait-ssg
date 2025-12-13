@@ -15,143 +15,157 @@
   </script>
 </head>
 <body>
-  <nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
-      <span class="sr-only">Toggle navigation</span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="links-flex" id="primary-menu">
-      <button onclick="scrollToElement('capabilities')" class="nav-link" href="#capabilities">Capabilities</button>
-      <button onclick="scrollToElement('team')" class="nav-link" href="#team">Team</button>
-      <button onclick="scrollToElement('location')" class="nav-link" href="#location">Location</button>
-      <button onclick="scrollToElement('about')" class="nav-link" href="#about">About</button>
-    </div>
-  </nav>
+  <header class="site-header">
+    <nav aria-label="Primary">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="links-flex" id="primary-menu">
+        <li><a class="nav-link" data-target="capabilities" href="#capabilities">Capabilities</a></li>
+        <li><a class="nav-link" data-target="team" href="#team">Team</a></li>
+        <li><a class="nav-link" data-target="location" href="#location">Location</a></li>
+        <li><a class="nav-link" data-target="about" href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <main>
-    <div class="landing" id="home">
+  <main id="main-content">
+    <section class="landing" id="home" aria-labelledby="site-title">
       <div class="hero-card">
-        <h1 class="hero-text">Onkaparinga IT</h1>
-        <div>Your local mobile IT repair technicians.</div>
-        <div class="contact-email"><strong>Contact us: </strong><a href="mailto:info@onkaparingait.com">info@onkaparingait.com</a></div>
+        <h1 id="site-title" class="hero-text">Onkaparinga IT</h1>
+        <p>Your local mobile IT repair technicians.</p>
+        <p class="contact-email"><strong>Contact us: </strong><a href="mailto:info@onkaparingait.com">info@onkaparingait.com</a></p>
       </div>
-      <div></div>
-    </div>
-    <div class="section-divider"></div>
-    <div class="section-box" id="capabilities">
-    <div class="section-child">
-      <div>
-        <h1>Capabilities</h1>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-box" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-child">
+        <header class="section-header">
+          <h2 id="capabilities-title" class="section-title">Capabilities</h2>
+        </header>
         <p>
           Onkaparinga IT offers a wide range of IT help and repair services. We can help with Windows, MacOS, and Linux systems.
           We specialise in the following:
         </p>
-        <strong>General IT Help</strong>
-        <ul>
-          <li>System-clean-up and upgrades</li>
-          <li>Software installation and troubleshooting</li>
-          <li>Email setup and help</li>
-          <li>Set up printers and other peripherals</li>
-          <li>Home visits for home users and small businesses</li>
-          <li>Wi-Fi setup and troubleshooting</li>
-        </ul>
-        <strong>PC and laptop Repair</strong>
-        <ul>
-          <li>General hardware diagnostics</li>
-          <li>SSD and RAM upgrades</li>
-          <li>Screen and battery replacement</li>
-        </ul>
-        <strong>Backup and Recovery</strong>
-        <ul>
-          <li>Local and cloud backup</li>
-          <li>Recovery from accidental deletion*</li>
-          <li>Advice on long-term data protection</li>
-        </ul>
-        <strong>Virus and Malware Protection</strong>
-        <ul>
-          <li>Antivirus and firewall setup</li>
-          <li>Safe-browsing and phishing advice</li>
-        </ul>
-        <strong>Advanced Setups</strong>
-        <ul>
-          <li>Linux and dual-boot setups</li>
-          <li>NAS setups</li>
-        </ul>
+        <div class="capability-groups">
+          <div class="capability-group">
+            <h3 class="section-subtitle">General IT Help</h3>
+            <ul>
+              <li>System-clean-up and upgrades</li>
+              <li>Software installation and troubleshooting</li>
+              <li>Email setup and help</li>
+              <li>Set up printers and other peripherals</li>
+              <li>Home visits for home users and small businesses</li>
+              <li>Wi-Fi setup and troubleshooting</li>
+            </ul>
+          </div>
+          <div class="capability-group">
+            <h3 class="section-subtitle">PC and laptop Repair</h3>
+            <ul>
+              <li>General hardware diagnostics</li>
+              <li>SSD and RAM upgrades</li>
+              <li>Screen and battery replacement</li>
+            </ul>
+          </div>
+          <div class="capability-group">
+            <h3 class="section-subtitle">Backup and Recovery</h3>
+            <ul>
+              <li>Local and cloud backup</li>
+              <li>Recovery from accidental deletion*</li>
+              <li>Advice on long-term data protection</li>
+            </ul>
+          </div>
+          <div class="capability-group">
+            <h3 class="section-subtitle">Virus and Malware Protection</h3>
+            <ul>
+              <li>Antivirus and firewall setup</li>
+              <li>Safe-browsing and phishing advice</li>
+            </ul>
+          </div>
+          <div class="capability-group">
+            <h3 class="section-subtitle">Advanced Setups</h3>
+            <ul>
+              <li>Linux and dual-boot setups</li>
+              <li>NAS setups</li>
+            </ul>
+          </div>
+        </div>
         <p class="min">*We cannot always guarantee complete data recovery. Sometimes accidental deletion can result in unrecoverable data</p>
       </div>
-    </div>
-    </div>
-    <div class="section-divider"></div>
-    <div class="section-box" id="team">
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-box" id="team" aria-labelledby="team-title">
       <div class="section-child">
-        <h1>Our Team</h1>
+        <header class="section-header">
+          <h2 id="team-title" class="section-title">Our Team</h2>
+        </header>
         <div class="member-box">
-          <div class="member-card" id="nikolai">
+          <article class="member-card" id="nikolai">
             <div class="member-text-left">
-              <h2>Nikolai Patrick</h2>
+              <h3 class="member-name">Nikolai Patrick</h3>
               <p>Nikolai has extensive experience with hardware and software of all kinds. From slow systems to disappearing data, he will efficiently diagnose, fix and communicate the problem. </p>
               <div class="contact-info">
-                <a class="phone" href="tel:+61 0451347642">Phone: 0451 347 642</a>
+                <a class="phone" href="tel:+61451347642">Phone: 0451 347 642</a>
               </div>
             </div>
-            <img class="member-img" src="https://placecats.com/bella/300/300" alt="mug shot">
-          </div>
+            <img class="member-img" src="https://placecats.com/bella/300/300" alt="Portrait of Nikolai Patrick">
+          </article>
 
-          <div class="member-card" id="morris">
+          <article class="member-card" id="morris">
             <div class="member-text-right">
-              <h2>Morris Caines</h2>
+              <h3 class="member-name">Morris Caines</h3>
               <p>Morris is a technician at Onkaparinga IT, who specialises in Windows and Mac systems. He focuses on clear explanations, as well as reliable and honest advice. He has a strong intuition for problem-solving, insighted by years of practical experience. </p>
               <div class="contact-info">
-                <a class="phone" href="tel:+61 0420279342">Phone: 0420 279 342</a>
+                <a class="phone" href="tel:+61420279342">Phone: 0420 279 342</a>
               </div>
             </div>
-            <img class="member-img" src="https://placecats.com/millie/300/300" alt="mug shot">
-          </div>
+            <img class="member-img" src="https://placecats.com/millie/300/300" alt="Portrait of Morris Caines">
+          </article>
         </div>
       </div>
-    </div>
-    <div class="section-divider"></div>
-    <div class="section-box" id="location">
-      <div class="section-child">
-        <div>
-          <h1>Locations</h1>
-          <p>
-            Onkaparinga IT is based in the southern suburbs of Adelaide. The map below shows the area that we operate in.
-          </p>
-          <div id="map"></div>
+    </section>
 
-          <style>
-            #map {
-              width: 100%;
-              height: 500px; /* small embedded map */
-              border-radius: 12px;
-              border: 1px solid #4f4d4d;
-            }
-          </style>
+    <hr class="section-divider">
 
-        </div>
-      </div>
-    </div>
-    <div class="section-divider"></div>
-    <div class="section-box" id="about">
+    <section class="section-box" id="location" aria-labelledby="location-title">
       <div class="section-child">
-        <div>
-          <h1>About</h1>
-          <p>
-            Onkaparinga IT is a local mobile IT repair service based in
-            Onkaparinga, South Australia. With years of experience with repairs, software and hardware of a wide variety. We do our best to provide transparent and honest advice, and to communicate clearly with our clients.
-          </p>
+        <header class="section-header">
+          <h2 id="location-title" class="section-title">Locations</h2>
+        </header>
+        <p>
+          Onkaparinga IT is based in the southern suburbs of Adelaide. The map below shows the area that we operate in.
+        </p>
+        <div class="map-wrapper">
+          <div id="map" role="img" aria-label="Map showing the Onkaparinga IT service area"></div>
         </div>
       </div>
-    </div>
-    </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="section-box" id="about" aria-labelledby="about-title">
+      <div class="section-child">
+        <header class="section-header">
+          <h2 id="about-title" class="section-title">About</h2>
+        </header>
+        <p>
+          Onkaparinga IT is a local mobile IT repair service based in
+          Onkaparinga, South Australia. With years of experience with repairs, software and hardware of a wide variety. We do our best to provide transparent and honest advice, and to communicate clearly with our clients.
+        </p>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="footer-content">
       <div class="footer-copyright">&copy; 2025 Onkaparinga IT</div>
-      <div>Designed and maintained by Nikolai Patrick and Morris Caines</div>
+      <div class="footer-text">Designed and maintained by Nikolai Patrick and Morris Caines</div>
     </div>
   </footer>
 </body>
