@@ -172,6 +172,9 @@ nav.scrolled {
     overflow: hidden;
     background: #111;
 }
+strong {
+    font-weight: 500;
+}
 
 @media screen and (max-width: 800px) {
     #nikolai {
