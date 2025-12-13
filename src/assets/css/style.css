@@ -18,15 +18,25 @@ h1 {
     text-align: center;
 }
 p {
-    text-align: justify;
-    /*word-spacing: .05rem;*/
     line-height: 1.35rem;
+    text-align: center;
+}
+.min {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+.phone {
+    color: #b0b0b0;
 }
 a {
     text-decoration: none;
     color: #eee;
 }
-a,button:hover {
+a:hover {
+    color: #b0b0b0;
+}
+button:hover {
     color: #b0b0b0;
 }
 button {
@@ -36,6 +46,16 @@ button {
     font-family: Ubuntu, normal, serif;
     font-style: normal;
     font-weight: 300;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 .nav-link {
     font-size: 1.25rem;
@@ -48,6 +68,8 @@ nav {
     align-items: center;
     justify-content: center;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #111;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .25s ease;
@@ -55,6 +77,24 @@ nav {
     padding: 0 1.5rem;
     box-sizing: border-box;
     z-index: 2000;
+    flex-wrap: wrap;
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1.25rem;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #eee;
+    margin: 4px 0;
+    transition: transform .2s ease, opacity .2s ease;
 }
 
 .links-flex {
@@ -74,6 +114,9 @@ nav.scrolled {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.contact-email {
+    margin-top: 1rem;
 }
 
 /*.landing {*/
@@ -175,8 +218,65 @@ nav.scrolled {
 strong {
     font-weight: 500;
 }
+.asterisk {
+    cursor: pointer;
+}
+li {
+    line-height: 1.5rem;
+}
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 @media screen and (max-width: 800px) {
+    nav {
+        justify-content: center;
+        padding-right: 3.5rem;
+        position: relative;
+    }
+
+
+    .links-flex {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        background: #111;
+        border-bottom: 1px solid #4f4d4d;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+        z-index: 1500;
+
+    }
+
+    nav.menu-open .links-flex {
+        display: flex;
+    }
+
+    .member-text-left {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .member-text-right {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    .nav-link {
+        width: 100%;
+        text-align: left;
+        padding: 1rem 1.5rem;
+        border-top: 1px solid #181818;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     #nikolai {
         flex-direction: column;
         align-items: center;

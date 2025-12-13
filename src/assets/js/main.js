@@ -11,6 +11,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateNavBorder();
     window.addEventListener('scroll', updateNavBorder, { passive: true });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelectorAll('.nav-link');
+    function closeMenu() {
+        if (!nav) return;
+        nav.classList.remove('menu-open');
+        if (menuToggle) {
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 800) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!nav.classList.contains('menu-open')) return;
+
+        const isClickInsideNav = nav.contains(event.target);
+        const isToggleButton = menuToggle.contains(event.target);
+
+        if (!isClickInsideNav && !isToggleButton) {
+            closeMenu();
+        }
+    });
+
 });
 
 function scrollToElement(id, offset = 42) {

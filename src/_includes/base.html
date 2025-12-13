@@ -16,8 +16,13 @@
 </head>
 <body>
   <nav>
-    <div class="links-flex">
-      <button onclick="scrollToElement('home')" class="nav-link" href="#home">Home</button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="links-flex" id="primary-menu">
       <button onclick="scrollToElement('capabilities')" class="nav-link" href="#capabilities">Capabilities</button>
       <button onclick="scrollToElement('team')" class="nav-link" href="#team">Team</button>
       <button onclick="scrollToElement('location')" class="nav-link" href="#location">Location</button>
@@ -30,11 +35,13 @@
       <div class="hero-card">
         <h1 class="hero-text">Onkaparinga IT</h1>
         <div>Your local mobile IT repair technicians.</div>
+        <div class="contact-email"><strong>Contact us: </strong><a href="mailto:info@onkaparingait.com">info@onkaparingait.com</a></div>
       </div>
+      <div></div>
     </div>
     <div class="section-divider"></div>
     <div class="section-box" id="capabilities">
-      <div class="section-child">
+    <div class="section-child">
       <div>
         <h1>Capabilities</h1>
         <p>
@@ -43,46 +50,38 @@
         </p>
         <strong>General IT Help</strong>
         <ul>
-          <li>Slow computers and system-clean-up</li>
+          <li>System-clean-up and upgrades</li>
           <li>Software installation and troubleshooting</li>
-          <li>System upgrades</li>
           <li>Email setup and help</li>
-          <li>Set up and troubleshoot printers, scanners, and other peripherals.</li>
-          <li>One-on-one support visits for home users and small businesses.</li>
+          <li>Set up printers and other peripherals</li>
+          <li>Home visits for home users and small businesses</li>
+          <li>Wi-Fi setup and troubleshooting</li>
         </ul>
         <strong>PC and laptop Repair</strong>
         <ul>
           <li>General hardware diagnostics</li>
           <li>SSD and RAM upgrades</li>
-          <li>Screen, keyboard, and battery replacement</li>
+          <li>Screen and battery replacement</li>
         </ul>
         <strong>Backup and Recovery</strong>
         <ul>
           <li>Local and cloud backup</li>
-          <li>Recovery from accidental deletion</li>
-          <li>Backup and disaster recovery testing</li>
-          <li>advice on long-term data protection strategies</li>
+          <li>Recovery from accidental deletion*</li>
+          <li>Advice on long-term data protection</li>
         </ul>
         <strong>Virus and Malware Protection</strong>
         <ul>
-          <li>Malware and ransomware mitigation</li>
-          <li>Security hardening</li>
-          <li>Safe-browsing and phishing advice</li>
           <li>Antivirus and firewall setup</li>
-        </ul>
-        <strong>Networking</strong>
-        <ul>
-          <li>Home and small office networks</li>
-          <li>WiFi coverage and troubleshooting</li>
-          <li>Router, switch, and cabling advice</li>
+          <li>Safe-browsing and phishing advice</li>
         </ul>
         <strong>Advanced Setups</strong>
         <ul>
           <li>Linux and dual-boot setups</li>
           <li>NAS setups</li>
         </ul>
+        <p class="min">*We cannot always guarantee complete data recovery. Sometimes accidental deletion can result in unrecoverable data</p>
       </div>
-      </div>
+    </div>
     </div>
     <div class="section-divider"></div>
     <div class="section-box" id="team">
@@ -92,9 +91,9 @@
           <div class="member-card" id="nikolai">
             <div class="member-text-left">
               <h2>Nikolai Patrick</h2>
-              <p>Nikolai is a professional computer. He has been computing for years and has become a professional. </p>
+              <p>Nikolai has extensive experience with hardware and software of all kinds. From slow systems to disappearing data, he will efficiently diagnose, fix and communicate the problem. </p>
               <div class="contact-info">
-                <a href="tel:+61 0451347642">Phone: 0451 347 642</a>
+                <a class="phone" href="tel:+61 0451347642">Phone: 0451 347 642</a>
               </div>
             </div>
             <img class="member-img" src="https://placecats.com/bella/300/300" alt="mug shot">
@@ -103,9 +102,9 @@
           <div class="member-card" id="morris">
             <div class="member-text-right">
               <h2>Morris Caines</h2>
-              <p>Morris is a professional computer. He has been computing for years and has become a professional. </p>
+              <p>Morris is a technician at Onkaparinga IT, who specialises in Windows and Mac systems. He focuses on clear explanations, as well as reliable and honest advice. He has a strong intuition for problem-solving, insighted by years of practical experience. </p>
               <div class="contact-info">
-                <a href="tel:+61 0420279342">Phone: 0420 279 342</a>
+                <a class="phone" href="tel:+61 0420279342">Phone: 0420 279 342</a>
               </div>
             </div>
             <img class="member-img" src="https://placecats.com/millie/300/300" alt="mug shot">
@@ -142,8 +141,7 @@
           <h1>About</h1>
           <p>
             Onkaparinga IT is a local mobile IT repair service based in
-            Onkaparinga, South Australia. We specialise in repairing
-            computers, laptops, and mobile phones.
+            Onkaparinga, South Australia. With years of experience with repairs, software and hardware of a wide variety.
           </p>
         </div>
       </div>
@@ -151,5 +149,8 @@
     <div class="section-divider">
     </div>
   </main>
+  <footer>
+
+  </footer>
 </body>
 </html>
