@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-function scrollToElement(id, offset = 42) {
+function scrollToElement(id, offset = 60) {
     const element = document.getElementById(id);
     const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const offsetPosition = elementPosition - offset;

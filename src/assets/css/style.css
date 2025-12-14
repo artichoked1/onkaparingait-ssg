@@ -12,7 +12,7 @@ body {
 .hero-text {
     font-size: 3rem;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 p {
     line-height: 1.35rem;
@@ -120,7 +120,7 @@ nav.scrolled {
     padding-right: 1rem;
 }
 .contact-email {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 /*.landing {*/
