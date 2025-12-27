@@ -228,6 +228,7 @@ li {
 img {
     max-width: 100%;
     height: auto;
+    pointer-events: none;
 }
 .section-header {
     width: 100%;
