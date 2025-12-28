@@ -2,47 +2,27 @@
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 300; /* Light weight */
-    src: url('/assets/fonts/Ubuntu-Light.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400; /* Regular weight */
-    src: url('/assets/fonts/Ubuntu-Regular.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 500; /* Medium weight */
-    src: url('/assets/fonts/Ubuntu-Medium.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 700; /* Bold weight */
-    src: url('/assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-display: swap;
+    src: url('/assets/fonts/Ubuntu-Light.woff2') format('woff2');
 }
 @font-face {
     font-family: 'Ubuntu';
     font-style: italic;
     font-weight: 300; /* Light italic */
-    src: url('/assets/fonts/Ubuntu-LightItalic.ttf') format('truetype');
+    font-display: swap;
+    src: url('/assets/fonts/Ubuntu-LightItalic.woff2') format('woff2');
 }
 @font-face {
     font-family: 'Ubuntu';
-    font-style: italic;
-    font-weight: 400; /* Regular italic */
-    src: url('/assets/fonts/Ubuntu-Italic.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500; /* Medium weight */
+    font-display: swap;
+    src: url('/assets/fonts/Ubuntu-Medium.woff2') format('woff2');
 }
 @font-face {
     font-family: 'Ubuntu';
-    font-style: italic;
-    font-weight: 500; /* Medium italic */
-    src: url('/assets/fonts/Ubuntu-MediumItalic.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Ubuntu';
-    font-style: italic;
-    font-weight: 700; /* Bold italic */
-    src: url('/assets/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700; /* Bold weight */
+    font-display: swap;
+    src: url('/assets/fonts/Ubuntu-Bold.woff2') format('woff2');
 }
