@@ -1,34 +1,85 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="{{ site.language }}" prefix="og: https://ogp.me/ns#">
 <head>
-  <meta charset="utf-8" />
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <script src="assets/js/main.js" defer></script>
+  {% set metaTitle = title or site.name %}
+  {% set metaDescription = description or site.description %}
+  {% set metaImage = site.defaultImage %}
+  {% set canonicalUrl = site.url + page.url %}
+  {% set ogType = "website" %}
+  {% if seo and seo.title %}{% set metaTitle = seo.title %}{% endif %}
+  {% if seo and seo.description %}{% set metaDescription = seo.description %}{% endif %}
+  {% if seo and seo.image %}{% set metaImage = seo.image %}{% endif %}
+  {% if seo and seo.canonical %}{% set canonicalUrl = seo.canonical %}{% endif %}
+  {% if seo and seo.ogType %}{% set ogType = seo.ogType %}{% endif %}
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ metaTitle }}</title>
+  <meta name="description" content="{{ metaDescription }}">
+  <meta name="robots" content="{% if noindex %}noindex, nofollow{% else %}index, follow{% endif %}">
+  <link rel="canonical" href="{{ canonicalUrl }}">
 
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/main.js" defer></script>
   <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.ico">
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.ico">
 
   <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)">
-  <meta name="robots" content="index, follow">
-  <meta name="title" content="Onkaparinga IT">
-  <meta name="description" content="Your local mobile IT repair technicians.">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ metaTitle }}">
+  <meta property="og:description" content="{{ metaDescription }}">
+  <meta property="og:type" content="{{ ogType }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
+  <meta property="og:locale" content="{{ site.locale }}">
+  <meta property="og:image" content="{{ site.url }}{{ metaImage }}">
 
-  <meta property="og:title" content="Onkaparinga IT">
-  <meta property="og:description" content="Your local mobile IT repair technicians.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://onkaparingait.com/">
-  <meta property="og:locale" content="en_AU">
-  <meta property="og:image" content="https://onkaparingait.com/assets/images/river_logo_transparent.png">
+  <meta name="twitter:title" content="{{ metaTitle }}">
+  <meta name="twitter:description" content="{{ metaDescription }}">
+  <meta name="twitter:card" content="{{ site.twitterCard }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ metaImage }}">
 
-  <meta name="twitter:title" content="Onkaparinga IT">
-  <meta name="twitter:description" content="Your local mobile IT repair technicians.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://onkaparingait.com/assets/images/river_logo_transparent.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ComputerRepair",
+      "name": "{{ business.name }}",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}{{ site.defaultImage }}",
+      "email": "{{ business.email }}",
+      "telephone": "{{ business.primaryPhone }}",
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "City of Onkaparinga"
+        },
+        {
+          "@type": "City",
+          "name": "Adelaide"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Onkaparinga",
+        "addressRegion": "SA",
+        "addressCountry": "AU"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "{{ business.primaryPhone }}",
+          "email": "{{ business.email }}",
+          "availableLanguage": "en"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "{{ business.secondaryPhone }}",
+          "availableLanguage": "en"
+        }
+      ]
+    }
+  </script>
 
   <!-- Cloudflare Web Analytics -->
   <!-- The lion doesn't concern himself with leaving hardcoded analytics tokens in public repos -->
@@ -64,7 +115,9 @@
 
     </div>
   </footer>
+  {% if loadMapAssets %}
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  {% endif %}
 </body>
 </html>
