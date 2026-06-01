@@ -78,8 +78,8 @@ function initMap() {
         zoomControl: false
     }).setView([-35.22708204604496, 138.54444632445], 11);
 
-    L.circle([-35.27178487046093, 138.55423387615434], {radius: 15000, weight: 1, fillColor: '#7DBEFF'}).addTo(map);
-    L.circle([-35.18147515901024, 138.50284583247344], {radius: 10000, weight: 1, fillColor: '#7DBEFF'}).addTo(map);
+    L.circle([-35.27178487046093, 138.55423387615434], {radius: 16500, weight: 1, fillColor: '#7DBEFF'}).addTo(map);
+    L.circle([-35.18147515901024, 138.50284583247344], {radius: 15000, weight: 1, fillColor: '#7DBEFF'}).addTo(map);
     L.tileLayer(
         'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
         {
