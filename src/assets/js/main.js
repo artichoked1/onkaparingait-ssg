@@ -76,7 +76,7 @@ function initMap() {
 
     const map = L.map(mapElement, {
         zoomControl: false
-    }).setView([-35.22708204604496, 138.54444632445], 10);
+    }).setView([-35.22708204604496, 138.54444632445], 10.5);
 
     L.circle([-35.27178487046093, 138.55423387615434], {radius: 16500, weight: 1, fillColor: '#7DBEFF'}).addTo(map);
     L.circle([-35.18147515901024, 138.50284583247344], {radius: 15000, weight: 1, fillColor: '#7DBEFF'}).addTo(map);
